@@ -22,6 +22,8 @@ For example:
 ```sh
     > python getbatteryinfo_py2.py --i 5 --n 10
 ```
+  4. The output file `BatteryInfo-****.csv` is saved in the current directo
+  
 ### For Python 3.x on Windows
   1. Install Python 3.x on Windows and add Python to your PATH environment variable
   2. Install Python modules with pip: `pywin32` and `wmi`
