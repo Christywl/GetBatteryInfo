@@ -77,7 +77,7 @@ def save_to_csv(filename, intervals, num):
 
         if counter < num:
             print 'Waiting for %d minutes ...' % intervals
-            time.sleep(intervals)
+            time.sleep(intervals * 60)
         elif counter == num:
             print '\n' + '*' * 40
             print '\n********* The testing finished *********'
