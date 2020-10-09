@@ -14,7 +14,7 @@ class PowerClass(Structure):
                 ('BatteryFullLifeTime', c_ulong)]
 
 
-def get_designed_full_charged_capacity():
+def get_designed_and_full_charged_capacity():
 
     c = wmi.WMI()
     t = wmi.WMI(moniker="//./root/wmi")
@@ -95,7 +95,7 @@ def main():
     print('\nThe time interval(minutes) that you choose is %d minutes' % args.i)
     print('The log number that you choose is %d' % args.n)
     
-    get_designed_full_charged_capacity()
+    get_designed_and_full_charged_capacity()
     
     file_time = time.strftime("%Y-%m-%d-%H-%M-%S", time.localtime(time.time()))
     filename = "BatteryInfo" + "-" + file_time + ".csv"
