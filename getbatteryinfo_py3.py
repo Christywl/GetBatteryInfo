@@ -16,7 +16,7 @@ class PowerClass(Structure):
 
 def get_designed_and_full_charged_capacity():
 
-    c = wmi.WMI()
+    c = wmi.WMI() # http://www.voidcn.com/article/p-bmwrycny-btk.html
     t = wmi.WMI(moniker="//./root/wmi")
     battery_designed = c.CIM_Battery(Caption='Portable Battery')
     for i, b in enumerate(battery_designed):
@@ -29,7 +29,7 @@ def get_designed_and_full_charged_capacity():
 
 def get_battery_life_percent():
 
-    power_class = PowerClass()
+    power_class = PowerClass()  # http://www.itxm.cn/post/2069.html
     windll.kernel32.GetSystemPowerStatus(byref(power_class))
 
     return str(power_class.BatteryLifePercent)
